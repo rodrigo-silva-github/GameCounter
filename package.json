@@ -1,0 +1,22 @@
+{
+  "name": "GameCounter",
+  "version": "1.0.0",
+  "description": "GameCounter\r ===========",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/rodrigo-silva-github/GameCounter.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/rodrigo-silva-github/GameCounter/issues"
+  },
+  "homepage": "https://github.com/rodrigo-silva-github/GameCounter",
+  "dependencies": {
+    "node": "0.0.0"
+  }
+}
