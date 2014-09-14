@@ -1,34 +1,44 @@
 <!DOCTYPE html>
-<html>
+<html ng-app="phonecatApp">
 	<head>
-		<title>
-			Game Counter Hue Hue
-		</title>
+		<title> Game Counter Hue Hue </title>
 	</head>
-	<body>
+	<body ng-controller="mainController">
 		<table>
 			<thead>
-				<th>Col 1</th>
-				<th>Col 2</th>
-				<th>Col 3</th>
-				<th>Col 4</th>
+				<th>Jogador</th>
+				<th></th>
+				<th>Level</th>
+				<th></th>
+				<th></th>
+				<th>Equip</th>
+				<th></th>				
 			</thead>
 			<tbody>
-				<tr>
-					<td>valor 1</td>
-					<td>valor 2</td>
-					<td>valor 3</td>
-					<td>valor 4</td>
-				</tr>
-				<tr>
-					<td>valor 1</td>
-					<td>valor 2</td>
-					<td>valor 3</td>
-					<td>valor 4</td>
-				</tr>
+				<button ng-click="addNewPlayer()">Novo Jogador</button>
+				<tr ng-repeat="player in players">
+					<td>Rodrigo</td>
+					<button>-</button>
+					<input type="button" />
+					<td>0</td>
+					<button>+</button>
+					<button>-</button>
+					<td>0</td>
+					<button>+</button>
+				</tr>				
 			</tbody>
 		</table>
-		
+
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.2.20/angular.js"></script>
+		<!-- Latest compiled and minified CSS -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+
+		<!-- Optional theme -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+
+		<!-- Latest compiled and minified JavaScript -->
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+		<script src="js/app.js"></script>
+		<script src="js/controllers.js"></script>
 	</body>
 </html>
