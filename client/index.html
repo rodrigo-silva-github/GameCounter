@@ -2,23 +2,45 @@
 <html ng-app="phonecatApp">
 	<head>
 		<title> Game Counter Hue Hue </title>
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 	</head>
 	<body ng-controller="mainController">
-		<table>
-			<thead>
-				<th>Jogador</th>
-				<th>Level</th>
-				<th>Equip</th>
-			</thead>
-			<tbody>
-				<button ng-click="addNewPlayer()">Novo Jogador</button>
-				<tr ng-repeat="player in players">
-					<td><input type="text" /></td>										
-					<td>0</td>					
-					<td>0</td>					
-				</tr>				
-			</tbody>
-		</table>
+		<button ng-click="addNewPlayer()">
+			Novo Jogador
+		</button>
+		<div class="container">
+			<div class="row" ng-repeat="player in players">
+				<div class="col-md-2">
+					<img height="100px" width="100px" class="img-circle" src="img/huehue.jpg" />
+				</div>
+				<div class="col-md-1">
+					<button type="button" class="btn btn-default btn-lg" ng-click="levelUp(player)">
+						<span class="glyphicon glyphicon-chevron-up"></span>
+					</button>
+				</div>
+				<div class="col-md-1 text-center">
+					<h1 class="center-block">{{player.level}}</h1>
+				</div>
+				<div class="col-md-1">
+					<button type="button" class="btn btn-default btn-lg" ng-click="levelDown(player)">
+						<span class="glyphicon glyphicon-chevron-down"></span>
+					</button>
+				</div>
+				<div class="col-md-1">
+					<button type="button" class="btn btn-default btn-lg" ng-click="equipUp(player)">
+						<span class="glyphicon glyphicon-chevron-up"></span>
+					</button>
+				</div>
+				<div class="col-md-1 text-center">
+					<h1 class="center-block">{{player.equip}}</h1>
+				</div>
+				<div class="col-md-1">
+					<button type="button" class="btn btn-default btn-lg" ng-click="equipDown(player)">
+						<span class="glyphicon glyphicon-chevron-down"></span>
+					</button>
+				</div>
+			</div>
+		</div>
 
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.2.20/angular.js"></script>
 		<!-- Latest compiled and minified CSS -->
